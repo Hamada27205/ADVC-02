@@ -50,6 +50,21 @@ namespace AssignmentADVC_02
             return results;
         }
 
+        public List<Product> FilterProducts(List<Product> products , Predicate<Product> condition) 
+        {
+
+            List<Product> results = new List<Product>();
+            foreach (Product p in products)
+            {
+                if (condition(p))
+                {
+                    results.Add(p);
+                }
+            }
+            return results;
+
+        }
+
     }
 
 
