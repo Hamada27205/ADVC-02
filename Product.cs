@@ -38,6 +38,18 @@ namespace AssignmentADVC_02
 
         }
 
+        public List<string> TransformProducts(List<Product> products, Func<Product, string> transformer)
+        {
+            List<string> results = new List<string>();
+
+            foreach (Product p in products)
+            {
+                results.Add(transformer(p));
+            }
+
+            return results;
+        }
+
     }
 
 
