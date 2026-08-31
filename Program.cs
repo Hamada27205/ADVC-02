@@ -157,7 +157,7 @@
             //   new Product { Id = 9, Name = "Headphones", Category = "Electronics", Price = 150, Stock = 40 },
             //   new Product { Id = 10, Name = "Jacket", Category = "Clothing", Price = 120, Stock = 15 }
             // };
-            
+
             //ProductCatalog Filter = new ProductCatalog();
 
             //List<Product> lowStock = Filter.FilterProducts
@@ -173,6 +173,20 @@
             //}
 
             #endregion
+
+            // بنستخدم Func<Product, bool> لأننا محتاجين نرجع قيمة true/false 
+            //   Where عشان نرجع منتجات مطابقة للشرط
+
+
+            // بنستخدم Action<Product> لأننا مش محتاجين نرجع أي قيمة (void)،
+            // إحنا بس عايزين ننفذ حركة زي الطباعة على كل منتج
+
+
+            // بنستخدم Func<Product, string> لأننا محتاجين نحوّل كل منتج 
+            // Product لقيمة من نوع مختلف string، مش مجرد true/false
+
+            // بنستخدم Predicate<Product> بديل مخصص ل Func<Product, bool>
+            // لأن  هنا  هو قصده هل المنتج ده يحقق شرط معين ولا لأ
 
         }
     }
