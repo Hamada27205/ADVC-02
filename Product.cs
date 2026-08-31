@@ -27,6 +27,20 @@ namespace AssignmentADVC_02
         {
             return products.Where(filter).ToList();
         }
+
+        public void PrintReport(List<Product> products, Action<Product> action)
+        {
+
+            foreach (Product p in products)
+            {
+                action(p);
+            }
+
+        }
+
     }
+
+
+      
 
 }
